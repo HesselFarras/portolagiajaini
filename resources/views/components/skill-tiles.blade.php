@@ -18,9 +18,9 @@
 @endphp
 
 <section id="keahlian" class="scroll-mt-24">
-    <h2 class="text-2xl font-bold tracking-tight">Keahlian</h2>
+    <h2 class="text-2xl font-bold tracking-tight">Skills</h2>
     <p class="mt-1 text-sm text-muted-foreground">
-        Genre yang paling sering kuputar setiap hari
+        Skills and technologies that I have mastered and used in my projects
     </p>
 
     <div class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-3">

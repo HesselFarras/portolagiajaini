@@ -37,15 +37,8 @@
                     href="#kontak"
                     class="rounded-full border border-foreground/40 px-6 py-2.5 text-sm font-bold transition-all hover:scale-105 hover:border-foreground"
                 >
-                    Ikuti
+                    Follow
                 </a>
-                <button
-                    type="button"
-                    aria-label="Opsi lainnya"
-                    class="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                    <x-icon name="ellipsis" class="size-7" />
-                </button>
             </div>
         </div>
     </div>

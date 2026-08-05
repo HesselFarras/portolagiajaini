@@ -9,7 +9,7 @@ return [
     */
     'meta' => [
         'title' => 'Hessel Farras',
-        'description' => 'Portofolio Hessel Farras, mahasiswa Informatics Engineering.',
+        'description' => 'Portfolio of Hessel Farras, an Informatics Engineering student.',
     ],
 
     /*
@@ -22,8 +22,8 @@ return [
         'brand' => 'hessel.dev',
         'avatar' => asset('images/avatar.jpg'),
         'hero' => asset('images/hero-artist.jpg'),
-        'hero_alt' => 'Hessel Farras di workspace dengan nuansa Spotify dark mode',
-        'stats' => '7 Project Released • Informatics Engineering Student & Tech Explorer • Indonesia',
+        'hero_alt' => 'Hessel Farras in workspace with Spotify dark mode theme',
+        'stats' => '7 Projects Released • Informatics Engineering Student & Tech Explorer • Indonesia',
     ],
 
     /*
@@ -47,8 +47,8 @@ return [
         [
             'id' => 'skillink',
             'title' => 'Skillink',
-            'tagline' => 'Platform freelance dan portofolio mahasiswa',
-            'description' => 'Platform digital tempat mahasiswa membangun portofolio profesional dan menjangkau klien untuk layanan freelance.',
+            'tagline' => 'Student freelance and portfolio platform',
+            'description' => 'A digital platform for students to build professional portfolios and reach clients for freelance opportunities.',
             'tags' => ['Laravel', 'JavaScript', 'Tailwind CSS', 'PostgreSQL'],
             'plays' => '2.340.112',
             'duration' => '3:45',
@@ -58,8 +58,8 @@ return [
         [
             'id' => 'Savvy',
             'title' => 'Savvy',
-            'tagline' => 'Aplikasi mobile pencatat keuangan dengan AI',
-            'description' => 'Aplikasi mobile untuk mencatat keuangan dengan bantuan AI yang dapat membantu menganalisis keuangan pribadi.',
+            'tagline' => 'AI-powered mobile financial tracker',
+            'description' => 'A mobile application for personal finance tracking with AI assistance to help analyze daily expenditures.',
             'tags' => ['Flutter', 'Supabase', 'Dart'],
             'plays' => '1.890.432',
             'duration' => '4:10',
@@ -69,8 +69,8 @@ return [
         [
             'id' => 'voting-duta',
             'title' => 'Voting Duta HIMAFI',
-            'tagline' => 'Sistem e-voting real-time berbatas waktu',
-            'description' => 'Platform pemungutan suara online dengan validasi jadwal otomatis (Carbon), proteksi batas waktu, dan rekapitulasi cepat.',
+            'tagline' => 'Real-time e-voting system with strict deadline enforce',
+            'description' => 'Online voting platform featuring automatic schedule validation (Carbon), time limit protection, and fast vote tallying.',
             'tags' => ['Laravel', 'Alpine.js', 'Supabase','PostgreSQL','Tailwind CSS'],
             'plays' => '510.000',
             'duration' => '3:15',
@@ -79,9 +79,9 @@ return [
         ],
         [
             'id' => 'sdn-ciledug-barat',
-            'title' => 'Web Profile SDN Ciledug Barat',
-            'tagline' => 'Website profil sekolah berbasis Laravel',
-            'description' => 'Website profil sekolah untuk penyampaian informasi publik, dengan fitur manajemen konten dan berita sekolah.',
+            'title' => 'SDN Ciledug Barat',
+            'tagline' => 'School profile website built with Laravel',
+            'description' => 'School profile website for public information delivery, equipped with content management and school news features.',
             'tags' => ['Laravel', 'Tailwind CSS','JavaScript', 'PostgreSQL', 'Supabase'],
             'plays' => '1.200.000',
             'duration' => '4:00',
@@ -91,8 +91,8 @@ return [
         [
             'id' => 'clauve',
             'title' => 'clauve.wear',
-            'tagline' => 'E-commerce fashion single vendor',
-            'description' => 'Platform e-commerce untuk fashion single vendor, dengan fitur katalog produk, keranjang belanja, dan integrasi pembayaran online.',
+            'tagline' => 'Single-vendor fashion e-commerce platform',
+            'description' => 'An e-commerce platform for single-vendor fashion retail, featuring product catalogs, shopping cart, and online payment integration.',
             'tags' => ['Laravel', 'Tailwind CSS', 'PostgreSQL', 'Supabase'],
             'plays' => '750.000',
             'duration' => '3:30',
@@ -101,9 +101,9 @@ return [
         ],
         [
             'id' => 'smkletris2',
-            'title' => 'Web Profile SMK Letris Indonesia 2',
-            'tagline' => 'Website profil sekolah berbasis Laravel',
-            'description' => 'Website profil sekolah untuk penyampaian informasi publik, dengan fitur manajemen konten dan berita sekolah.',
+            'title' => 'SMK Letris Indonesia 2',
+            'tagline' => 'School profile website built with Laravel',
+            'description' => 'School profile website for public information dissemination, featuring content management and school news updates.',
             'tags' => ['Laravel', 'Tailwind CSS', 'MySQL',],
             'plays' => '1.000.000',
             'duration' => '3:50',
@@ -113,8 +113,8 @@ return [
         [
             'id' => 'travelin',
             'title' => 'Travelin',
-            'tagline' => 'Website travel dan wisata berbasis Laravel',
-            'description' => 'Website travel dan wisata berbasis Laravel, dengan fitur pencarian destinasi, booking tiket, dan ulasan pengguna.',
+            'tagline' => 'Laravel-based travel and tourism website',
+            'description' => 'A travel and tourism website powered by Laravel, featuring destination search, ticket booking, and user reviews.',
             'tags' => ['Laravel', 'Tailwind CSS', 'MySQL',],
             'plays' => '1.000.000',
             'duration' => '3:50',
@@ -152,9 +152,9 @@ return [
             'period' => '2026',
             'year' => '2026',
             'points' => [
-                'Mengembangkan website profil sekolah untuk penyampaian informasi publik',
-                'Mengimplementasikan fitur manajemen konten dan berita sekolah',
-                'Dibangun dengan Laravel dan Tailwind CSS',
+                'Developed school profile website for public information dissemination',
+                'Implemented content management system and school news publishing feature',
+                'Built using Laravel and Tailwind CSS',
             ],
         ],
         [
@@ -163,8 +163,8 @@ return [
             'period' => '2026',
             'year' => '2026',
             'points' => [
-                'Membangun aplikasi sistem pemungutan suara (e-voting) berbatas waktu',
-                'Menggunakan Laravel Carbon & Vanilla JS untuk mekanisme penutupan otomatis',
+                'Engineered time-restricted e-voting system application',
+                'Utilized Laravel Carbon & Vanilla JS for automated deadline enforcement mechanism',
             ],
         ],
     ],

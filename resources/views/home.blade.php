@@ -36,6 +36,7 @@
 
                 <div class="space-y-12 px-4 pb-10 pt-6 md:px-8">
                     <x-quick-grid />
+                    <x-about />
                     <x-top-tracks />
                     <x-project-cards />
                     <x-skill-tiles />

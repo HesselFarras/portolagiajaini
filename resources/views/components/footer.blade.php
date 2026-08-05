@@ -1,10 +1,10 @@
 @php
     $footerNav = [
-        ['label' => 'Beranda', 'href' => '#tentang'],
-        ['label' => 'Proyek', 'href' => '#proyek'],
-        ['label' => 'Keahlian', 'href' => '#keahlian'],
-        ['label' => 'Pengalaman', 'href' => '#pengalaman'],
-        ['label' => 'Kontak', 'href' => '#kontak'],
+        ['label' => 'About', 'href' => '#tentang'],
+        ['label' => 'Projects', 'href' => '#proyek'],
+        ['label' => 'Skills', 'href' => '#keahlian'],
+        ['label' => 'Experience', 'href' => '#pengalaman'],
+        ['label' => 'Contact', 'href' => '#kontak'],
     ];
     $socialLinks = [
         ['label' => 'GitHub', 'href' => config('portfolio.socials.github'), 'icon' => 'github'],
@@ -23,14 +23,14 @@
                 <span class="font-black tracking-tight">{{ config('portfolio.profile.brand') }}</span>
             </a>
             <p class="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">
-                Creative developer yang meracik kode seperti playlist: setiap baris
-                punya ritme, setiap rilis punya cerita.
+                Creative developer who crafts code like a playlist: every line
+                has a rhythm, every release tells a story.
             </p>
         </div>
 
         <nav aria-label="Navigasi footer">
             <p class="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                Navigasi
+                Navigation
             </p>
             <ul class="mt-3 space-y-2">
                 @foreach ($footerNav as $item)
@@ -48,7 +48,7 @@
 
         <div>
             <p class="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                Sosial
+                Social
             </p>
             <div class="mt-3 flex gap-3">
                 @foreach ($socialLinks as $link)
@@ -65,7 +65,7 @@
     </div>
 
     <div class="mt-10 flex flex-col justify-between gap-2 border-t border-border pt-5 text-[11px] text-muted-foreground md:flex-row">
-        <span>© {{ date('Y') }} {{ config('portfolio.profile.name') }}. Semua hak dilindungi.</span>
-        <span>Dibangun dengan Laravel, Tailwind CSS & banyak kopi.</span>
+        <span>© {{ date('Y') }} {{ config('portfolio.profile.name') }} Every Song Has a Story</span>
+        <span>Created with Laravel, Tailwind CSS & lots of Butterscotch Aren Latte.</span>
     </div>
 </footer>

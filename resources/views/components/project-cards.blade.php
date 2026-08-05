@@ -1,9 +1,9 @@
 <section id="rilisan" class="scroll-mt-24">
     <div class="flex items-end justify-between">
         <div>
-            <h2 class="text-2xl font-bold tracking-tight">Rilisan Terbaru</h2>
+            <h2 class="text-2xl font-bold tracking-tight">Latest Releases</h2>
             <p class="mt-1 text-sm text-muted-foreground">
-                Beberapa proyek paling fresh dari studio
+                Freshly released albums and singles that I have produced or contributed to
             </p>
         </div>
     </div>

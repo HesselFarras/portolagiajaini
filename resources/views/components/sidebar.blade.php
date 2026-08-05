@@ -1,9 +1,9 @@
 @php
     $projects = config('portfolio.projects');
     $navItems = [
-        ['label' => 'Beranda', 'href' => '#tentang', 'icon' => 'home'],
-        ['label' => 'Proyek', 'href' => '#proyek', 'icon' => 'folder-git-2'],
-        ['label' => 'Kontak', 'href' => '#kontak', 'icon' => 'mail'],
+        ['label' => 'About', 'href' => '#tentang', 'icon' => 'home'],
+        ['label' => 'Projects', 'href' => '#proyek', 'icon' => 'folder-git-2'],
+        ['label' => 'Contact', 'href' => '#kontak', 'icon' => 'mail'],
     ];
 @endphp
 

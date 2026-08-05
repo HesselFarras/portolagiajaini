@@ -1,11 +1,11 @@
 @php
     $quickLinks = [
-        ['label' => 'Proyek Unggulan', 'href' => '#proyek', 'icon' => 'folder-git-2'],
-        ['label' => 'Rilisan Terbaru', 'href' => '#rilisan', 'icon' => 'disc-3'],
-        ['label' => 'Keahlian', 'href' => '#keahlian', 'icon' => 'sparkles'],
-        ['label' => 'Pengalaman', 'href' => '#pengalaman', 'icon' => 'briefcase'],
-        ['label' => 'Tentang', 'href' => '#tentang', 'icon' => 'user'],
-        ['label' => 'Kontak', 'href' => '#kontak', 'icon' => 'mail'],
+        ['label' => 'About', 'href' => '#about', 'icon' => 'user'],
+        ['label' => 'Top Projects', 'href' => '#proyek', 'icon' => 'folder-git-2'],
+        ['label' => 'Latest Releases', 'href' => '#rilisan', 'icon' => 'disc-3'],
+        ['label' => 'Skills', 'href' => '#keahlian', 'icon' => 'sparkles'],
+        ['label' => 'Experience', 'href' => '#pengalaman', 'icon' => 'briefcase'],
+        ['label' => 'Contact', 'href' => '#kontak', 'icon' => 'mail'],
     ];
 @endphp
 

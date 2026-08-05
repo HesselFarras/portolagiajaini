@@ -1,9 +1,9 @@
 
 
 <section id="pengalaman" class="scroll-mt-24">
-    <h2 class="text-2xl font-bold tracking-tight">Diskografi Karier</h2>
+    <h2 class="text-2xl font-bold tracking-tight">Career Discography</h2>
     <p class="mt-1 text-sm text-muted-foreground">
-        Album-album yang membentuk perjalanan ini
+        Albums that have shaped this journey
     </p>
 
     <div class="mt-4 grid gap-4 md:grid-cols-3">

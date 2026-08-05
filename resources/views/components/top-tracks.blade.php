@@ -1,16 +1,16 @@
 <section id="proyek" class="scroll-mt-24">
     <div class="flex items-end justify-between">
-        <h2 class="text-2xl font-bold tracking-tight">Populer</h2>
+        <h2 class="text-2xl font-bold tracking-tight">Popular Projects</h2>
         <a
             href="#rilisan"
             class="text-sm font-bold text-muted-foreground transition-colors hover:text-foreground"
         >
-            Lihat semua
+            Show All
         </a>
     </div>
 
     <div class="mt-3">
-        @foreach (config('portfolio.projects') as $i => $project)
+        @foreach (collect(config('portfolio.projects'))->take(5) as $i => $project)
             <button
                 type="button"
                 data-track-row="{{ $i }}"

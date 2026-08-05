@@ -1,14 +1,13 @@
 @php
     $mobileNav = [
-        ['label' => 'Tentang', 'href' => '#tentang'],
-        ['label' => 'Proyek', 'href' => '#proyek'],
-        ['label' => 'Rilisan', 'href' => '#rilisan'],
-        ['label' => 'Keahlian', 'href' => '#keahlian'],
-        ['label' => 'Pengalaman', 'href' => '#pengalaman'],
-        ['label' => 'Kontak', 'href' => '#kontak'],
+        ['label' => 'About', 'href' => '#tentang'],
+        ['label' => 'Projects', 'href' => '#proyek'],
+        ['label' => 'Releases', 'href' => '#rilisan'],
+        ['label' => 'Skills', 'href' => '#keahlian'],
+        ['label' => 'Experience', 'href' => '#pengalaman'],
+        ['label' => 'Contact', 'href' => '#kontak'],
     ];
 @endphp
-
 
 <header class="sticky top-0 z-30 bg-background/55 px-4 pb-3 pt-3 backdrop-blur-md md:px-8">
     <div class="flex items-center justify-between gap-4">
@@ -31,10 +30,13 @@
 
         <div class="flex items-center gap-3">
             <a
-                href="mailto:{{ config('portfolio.socials.email') }}"
+                href="{{ asset('documents/CV_HESSEL_FARRAS.pdf') }}"
+                download="CV_HESSEL_FARRAS.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-full bg-foreground px-4 py-2 text-xs font-bold text-background transition-transform hover:scale-105"
             >
-                Unduh CV
+                Download CV
             </a>
             <img
                 src="{{ asset(config('portfolio.profile.avatar')) }}"
