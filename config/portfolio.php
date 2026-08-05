@@ -20,8 +20,8 @@ return [
     'profile' => [
         'name' => 'Hessel Farras',
         'brand' => 'hessel.dev',
-        'avatar' => 'images/avatar.jpg',
-        'hero' => 'images/hero-artist.jpg',
+        'avatar' => asset('images/avatar.jpg'),
+        'hero' => asset('images/hero-artist.jpg'),
         'hero_alt' => 'Hessel Farras di workspace dengan nuansa Spotify dark mode',
         'stats' => '7 Project Released • Informatics Engineering Student & Tech Explorer • Indonesia',
     ],
@@ -53,7 +53,7 @@ return [
             'plays' => '2.340.112',
             'duration' => '3:45',
             'year' => '2026',
-            'cover' => 'images/cover-1.png',
+            'cover' => asset('images/cover-1.png'),
         ],
         [
             'id' => 'Savvy',
@@ -64,7 +64,7 @@ return [
             'plays' => '1.890.432',
             'duration' => '4:10',
             'year' => '2026',
-            'cover' => 'images/cover-2.png',
+            'cover' => asset('images/cover-2.png'),
         ],
         [
             'id' => 'voting-duta',
@@ -75,7 +75,7 @@ return [
             'plays' => '510.000',
             'duration' => '3:15',
             'year' => '2026',
-            'cover' => 'images/cover-4.png',
+            'cover' => asset('images/cover-4.png'),
         ],
         [
             'id' => 'sdn-ciledug-barat',
@@ -86,7 +86,7 @@ return [
             'plays' => '1.200.000',
             'duration' => '4:00',
             'year' => '2026',
-            'cover' => 'images/cover-3.png',
+            'cover' => asset('images/cover-3.png'),
         ],
         [
             'id' => 'clauve',
@@ -97,7 +97,7 @@ return [
             'plays' => '750.000',
             'duration' => '3:30',
             'year' => '2025',
-            'cover' => 'images/cover-5.png',
+            'cover' => asset('images/cover-5.png'),
         ],
         [
             'id' => 'smkletris2',
@@ -108,7 +108,7 @@ return [
             'plays' => '1.000.000',
             'duration' => '3:50',
             'year' => '2025',
-            'cover' => 'images/cover-6.png',
+            'cover' => asset('images/cover-6.png'),
         ],
         [
             'id' => 'travelin',
@@ -119,7 +119,7 @@ return [
             'plays' => '1.000.000',
             'duration' => '3:50',
             'year' => '2024',
-            'cover' => 'images/cover-7.png',
+            'cover' => asset('images/cover-7.png'),
         ]
 
     ],
