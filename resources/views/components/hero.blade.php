@@ -1,4 +1,3 @@
-<script src="https://cdn.tailwindcss.com"></script>
 
 <section id="tentang" class="relative scroll-mt-24">
     <div class="relative h-[400px] overflow-hidden md:h-[460px]">

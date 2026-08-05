@@ -1,7 +1,6 @@
 @php
     $first = config('portfolio.projects')[0] ?? null;
 @endphp
-<script src="https://cdn.tailwindcss.com"></script>
 
 @if ($first)
 <footer class="flex h-16 w-full shrink-0 items-center justify-between gap-4 rounded-lg bg-card px-3 md:h-20 md:px-4">

@@ -6,7 +6,6 @@
         ['label' => 'Kontak', 'href' => '#kontak', 'icon' => 'mail'],
     ];
 @endphp
-<script src="https://cdn.tailwindcss.com"></script>
 
 <aside class="hidden w-72 shrink-0 flex-col gap-2 lg:flex">
     <div class="rounded-lg bg-card p-5">

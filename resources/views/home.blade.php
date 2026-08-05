@@ -1,4 +1,16 @@
-<script src="https://cdn.tailwindcss.com"></script>
+@if (app()->isProduction())
+    @php
+        $manifestPath = public_path('build/manifest.json');
+        $manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : [];
+    @endphp
+
+    @if(!empty($manifest))
+        <link rel="stylesheet" href="{{ asset('build/' . $manifest['resources/css/app.css']['file']) }}">
+        <script type="module" src="{{ asset('build/' . $manifest['resources/js/app.js']['file']) }}"></script>
+    @endif
+@else
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+@endif
 @extends('layouts.app')
 
 @section('content')

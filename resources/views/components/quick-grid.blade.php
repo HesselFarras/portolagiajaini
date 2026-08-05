@@ -8,7 +8,6 @@
         ['label' => 'Kontak', 'href' => '#kontak', 'icon' => 'mail'],
     ];
 @endphp
-<script src="https://cdn.tailwindcss.com"></script>
 
 <section aria-label="Navigasi cepat">
     <div class="grid grid-cols-2 gap-2 lg:grid-cols-3">

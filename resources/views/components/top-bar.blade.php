@@ -9,7 +9,6 @@
     ];
 @endphp
 
-<script src="https://cdn.tailwindcss.com"></script>
 
 <header class="sticky top-0 z-30 bg-background/55 px-4 pb-3 pt-3 backdrop-blur-md md:px-8">
     <div class="flex items-center justify-between gap-4">
