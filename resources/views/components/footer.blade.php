@@ -14,7 +14,7 @@
     ];
 @endphp
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<script src="https://cdn.tailwindcss.com"></script>
 
 <footer class="border-t border-border pt-10">
     <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_auto]">

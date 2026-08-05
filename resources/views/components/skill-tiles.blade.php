@@ -16,6 +16,7 @@
         'chart' => 'bar-chart-3',
     ];
 @endphp
+<script src="https://cdn.tailwindcss.com"></script>
 
 <section id="keahlian" class="scroll-mt-24">
     <h2 class="text-2xl font-bold tracking-tight">Keahlian</h2>

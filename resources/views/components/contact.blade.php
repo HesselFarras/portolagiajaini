@@ -1,5 +1,5 @@
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<script src="https://cdn.tailwindcss.com"></script>
 
 <section id="kontak" class="scroll-mt-24">
     <div class="flex flex-col justify-between gap-6 rounded-xl border border-primary/30 bg-gradient-to-r from-primary/20 via-primary/5 to-transparent p-6 md:flex-row md:items-center md:p-10">

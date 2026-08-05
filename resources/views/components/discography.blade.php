@@ -1,5 +1,5 @@
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<script src="https://cdn.tailwindcss.com"></script>
 
 <section id="pengalaman" class="scroll-mt-24">
     <h2 class="text-2xl font-bold tracking-tight">Diskografi Karier</h2>

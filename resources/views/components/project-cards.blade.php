@@ -7,6 +7,7 @@
             </p>
         </div>
     </div>
+<script src="https://cdn.tailwindcss.com"></script>
 
     <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
         @foreach (config('portfolio.projects') as $i => $project)

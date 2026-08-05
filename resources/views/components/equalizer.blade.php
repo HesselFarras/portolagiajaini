@@ -1,3 +1,5 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 @props(['paused' => false])
 
 <span {{ $attributes->merge(['class' => 'flex h-3.5 items-end gap-[2.5px]']) }} aria-hidden="true">

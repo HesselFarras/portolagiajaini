@@ -1,3 +1,5 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 <section id="proyek" class="scroll-mt-24">
     <div class="flex items-end justify-between">
         <h2 class="text-2xl font-bold tracking-tight">Populer</h2>
