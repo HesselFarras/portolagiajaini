@@ -9,8 +9,6 @@
     ];
 @endphp
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
 <section aria-label="Navigasi cepat">
     <div class="grid grid-cols-2 gap-2 lg:grid-cols-3">
         @foreach ($quickLinks as $link)

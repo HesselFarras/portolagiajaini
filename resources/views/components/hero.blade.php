@@ -1,5 +1,3 @@
-
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 <section id="tentang" class="relative scroll-mt-24">
     <div class="relative h-[400px] overflow-hidden md:h-[460px]">
         <img

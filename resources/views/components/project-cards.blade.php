@@ -1,5 +1,3 @@
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
 <section id="rilisan" class="scroll-mt-24">
     <div class="flex items-end justify-between">
         <div>

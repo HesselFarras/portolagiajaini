@@ -17,8 +17,6 @@
     ];
 @endphp
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
 <section id="keahlian" class="scroll-mt-24">
     <h2 class="text-2xl font-bold tracking-tight">Keahlian</h2>
     <p class="mt-1 text-sm text-muted-foreground">
