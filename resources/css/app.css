@@ -1,0 +1,72 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/*
+ * Design system — tema "Spotify Artist".
+ * Permukaan charcoal gelap, hijau khas (#1DB954), Montserrat sebagai font.
+ */
+
+:root {
+    /* Palet dark ala Spotify */
+    --color-background: oklch(0.135 0 0);
+    --color-foreground: oklch(0.985 0 0);
+    --color-card: oklch(0.155 0 0);
+    --color-card-foreground: oklch(0.985 0 0);
+    --color-primary: oklch(0.696 0.17 152);
+    --color-primary-foreground: oklch(0.14 0 0);
+    --color-secondary: oklch(0.225 0 0);
+    --color-secondary-foreground: oklch(0.985 0 0);
+    --color-muted: oklch(0.205 0 0);
+    --color-muted-foreground: oklch(0.72 0 0);
+    --color-accent: oklch(0.265 0 0);
+    --color-accent-foreground: oklch(0.985 0 0);
+    --color-border: oklch(1 0 0 / 8%);
+    --color-elevated: oklch(0.19 0 0);
+    --color-verified: oklch(0.72 0.13 235);
+
+    /* Warna kartu "genre" untuk tile keahlian */
+    --color-tile-foreground: oklch(0.98 0 0);
+    --color-tile-green: oklch(0.52 0.13 165);
+    --color-tile-rust: oklch(0.58 0.15 50);
+    --color-tile-gold: oklch(0.72 0.13 85);
+    --color-tile-berry: oklch(0.5 0.17 340);
+    --color-tile-iris: oklch(0.48 0.13 290);
+    --color-tile-teal: oklch(0.55 0.1 210);
+}
+
+@keyframes eq {
+    0%, 100% {
+        transform: scaleY(0.25);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+.animate-eq-1 { animation: eq 0.8s ease-in-out infinite; }
+.animate-eq-2 { animation: eq 1.2s ease-in-out infinite 0.2s; }
+.animate-eq-3 { animation: eq 1.0s ease-in-out infinite 0.4s; }
+
+/* Custom Utilities */
+.no-scrollbar {
+    scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.animate-eq {
+    animation: eq 1s ease-in-out infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
