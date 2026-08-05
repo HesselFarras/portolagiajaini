@@ -9,6 +9,7 @@
     ];
 @endphp
 
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <header class="sticky top-0 z-30 bg-background/55 px-4 pb-3 pt-3 backdrop-blur-md md:px-8">
     <div class="flex items-center justify-between gap-4">
         <div class="hidden gap-2 md:flex">

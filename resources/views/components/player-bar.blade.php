@@ -2,6 +2,8 @@
     $first = config('portfolio.projects')[0] ?? null;
 @endphp
 
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 @if ($first)
 <footer class="flex h-16 w-full shrink-0 items-center justify-between gap-4 rounded-lg bg-card px-3 md:h-20 md:px-4">
     {{-- Info trek (Kiri) --}}

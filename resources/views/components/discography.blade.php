@@ -1,3 +1,6 @@
+
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 <section id="pengalaman" class="scroll-mt-24">
     <h2 class="text-2xl font-bold tracking-tight">Diskografi Karier</h2>
     <p class="mt-1 text-sm text-muted-foreground">

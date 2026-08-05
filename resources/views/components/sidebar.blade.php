@@ -7,6 +7,8 @@
     ];
 @endphp
 
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 <aside class="hidden w-72 shrink-0 flex-col gap-2 lg:flex">
     <div class="rounded-lg bg-card p-5">
         <a href="#tentang" class="flex items-center gap-2">
