@@ -50,6 +50,33 @@ function openProjectModal(id) {
     document.body.classList.add("overflow-hidden");
 }
 
+function openCertificateModal(button) {
+    const modal = document.getElementById("certificate-modal");
+    const image = document.getElementById("certificate-modal-image");
+    const placeholder = document.getElementById("certificate-modal-placeholder");
+    const title = button.dataset.certificateTitle;
+    const imageUrl = button.dataset.certificateImage;
+
+    document.getElementById("certificate-modal-title").textContent = title;
+    document.getElementById("certificate-modal-placeholder-title").textContent = title;
+    image.alt = `Sertifikat ${title}`;
+    image.src = imageUrl;
+    image.classList.toggle("hidden", !imageUrl);
+    placeholder.classList.toggle("hidden", Boolean(imageUrl));
+    placeholder.classList.toggle("flex", !imageUrl);
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+}
+
+function closeCertificateModal() {
+    const modal = document.getElementById("certificate-modal");
+    if (!modal) return;
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+}
+
 function closeProjectModal() {
     const modal = document.getElementById("project-modal");
     if (!modal) return;
@@ -261,11 +288,31 @@ export function initPlayer() {
     });
 
     document.querySelectorAll("[data-project-modal-close]").forEach((btn) => btn.addEventListener("click", closeProjectModal));
+    document.querySelectorAll("[data-certificate-preview]").forEach((btn) => btn.addEventListener("click", () => openCertificateModal(btn)));
+    document.querySelectorAll("[data-certificates-toggle]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const allCertificates = document.getElementById("all-certificates");
+            if (!allCertificates) return;
+            const expanded = !allCertificates.classList.contains("max-h-0");
+            allCertificates.classList.toggle("max-h-0", expanded);
+            allCertificates.classList.toggle("max-h-[5000px]", !expanded);
+            allCertificates.classList.toggle("opacity-0", expanded);
+            allCertificates.classList.toggle("opacity-100", !expanded);
+            btn.textContent = expanded ? "View All Certificates" : "Show Less";
+        });
+    });
+    document.querySelectorAll("[data-certificate-modal-close]").forEach((btn) => btn.addEventListener("click", closeCertificateModal));
+    document.getElementById("certificate-modal")?.addEventListener("click", (event) => {
+        if (event.target.id === "certificate-modal") closeCertificateModal();
+    });
     document.getElementById("project-modal")?.addEventListener("click", (event) => {
         if (event.target.id === "project-modal") closeProjectModal();
     });
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeProjectModal();
+        if (event.key === "Escape") {
+            closeProjectModal();
+            closeCertificateModal();
+        }
     });
 
     document.querySelectorAll("[data-like]").forEach((btn) => {

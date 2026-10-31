@@ -140,6 +140,91 @@ return [
         ['name' => 'Networking', 'detail' => 'Cisco Packet Tracer, Computer Networks, Routing & Switching', 'icon' => 'wifi', 'tile' => 'berry'],
     ],
 
+    'certificates' => [
+        [
+            'title' => 'EC-Council Capture the Flag',
+            'year' => '2026',
+            'image' => 'images/certificates/Sertifikat CTF EC-Council.png',
+            'url' => '#',
+        ],
+        [
+            'title' => 'CyberOps Associate', 'year' => '2026',
+            'image' => 'images/certificates/serti20.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Introduction To Modern AI', 'year' => '2026',
+            'image' => 'images/certificates/serti19.png', 'url' => '#',
+        ],  
+        [
+            'title' => 'Introduction To Cybersecurity', 'year' => '2026',
+            'image' => 'images/certificates/serti18.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Endpoint Security', 'year' => '2026',
+            'image' => 'images/certificates/serti17.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Cyber Threat Management ', 'year' => '2026',
+            'image' => 'images/certificates/serti16.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Network Defense', 'year' => '2026',
+            'image' => 'images/certificates/serti15.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Security Operations', 'year' => '2026',
+            'image' => 'images/certificates/serti14.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Network Security', 'year' => '2026',
+            'image' => 'images/certificates/serti13.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Access Control Concepts', 'year' => '2026',
+            'image' => 'images/certificates/serti12.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Incident Response, Business Continuity and Disaster Recovery Concepts', 'year' => '2026',
+            'image' => 'images/certificates/serti11.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Security Principles', 'year' => '2026',
+            'image' => 'images/certificates/serti10.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Red Hat Enterprise Linux Automation with Ansible', 'year' => '2025',
+            'image' => 'images/certificates/serti9.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Red Hat System Administration I', 'year' => '2026',
+            'image' => 'images/certificates/serti8.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Red Hat System Administration II', 'year' => '2026',
+            'image' => 'images/certificates/serti7.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Linux Essentials', 'year' => '2026',
+            'image' => 'images/certificates/serti6.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Operating Systems Basics', 'year' => '2026',
+            'image' => 'images/certificates/serti5.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Dasar AI', 'year' => '2026',
+            'image' => 'images/certificates/serti4.png', 'url' => '#',
+        ],
+        [
+            'title' => 'DCI Bootcamp for Beginners: Flutter', 'year' => '2026',
+            'image' => 'images/certificates/serti3.png', 'url' => '#',
+        ],
+        [
+            'title' => 'Bootcamp Full-Stack Developer Laravel 11, TailwindCSS, dan Filament', 'year' => '2026',
+            'image' => 'images/certificates/serti2.png', 'url' => '#',
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Pengalaman ("Diskografi")

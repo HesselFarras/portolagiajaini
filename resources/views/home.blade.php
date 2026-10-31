@@ -58,6 +58,7 @@
                     <x-about />
                     <x-project-cards />
                     <x-skill-tiles />
+                    <x-certificates />
                     <x-discography />
                     <x-contact />
                     <x-footer />
@@ -97,6 +98,19 @@
                 <div class="flex gap-3">
                     <a id="project-modal-demo" href="#" target="_blank" rel="noopener" class="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Live Demo</a>
                     <a id="project-modal-github" href="#" target="_blank" rel="noopener" class="rounded-full border border-border px-5 py-2.5 text-sm font-bold">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificate-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="certificate-modal-title">
+        <div class="relative max-h-[95vh] w-full max-w-6xl rounded-xl bg-card p-4 shadow-2xl">
+            <button type="button" data-certificate-modal-close aria-label="Tutup preview sertifikat" class="absolute right-6 top-6 z-10 grid size-10 place-items-center rounded-full bg-black/70 text-xl text-white">×</button>
+            <h2 id="certificate-modal-title" class="mb-3 pr-12 text-sm font-bold"></h2>
+            <div class="flex max-h-[82vh] justify-center overflow-auto rounded-lg bg-white p-3">
+                <img id="certificate-modal-image" src="" alt="" class="block max-h-[78vh] max-w-full w-auto object-contain">
+                <div id="certificate-modal-placeholder" class="hidden aspect-[1.6/1] w-full max-w-3xl items-center justify-center rounded-lg border border-primary/30 bg-gradient-to-br from-primary/20 via-card to-secondary p-8 text-center">
+                    <div><p class="text-xs font-bold uppercase tracking-widest text-primary">Certificate Preview</p><p id="certificate-modal-placeholder-title" class="mt-3 text-2xl font-black"></p></div>
                 </div>
             </div>
         </div>
