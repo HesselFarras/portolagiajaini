@@ -21,6 +21,7 @@ const state = { index: 0, playing: false, progress: 0 };
 let timer = null;
 const audio = new Audio();
 audio.preload = "metadata";
+audio.volume = Number(localStorage.getItem("portfolio-volume") ?? 0.7);
 
 // ponytail: Web Audio API click sound, zero dependencies
 function openProjectModal(id) {
@@ -321,6 +322,26 @@ export function initPlayer() {
             btn.classList.toggle("text-muted-foreground", !liked);
             btn.querySelector("svg")?.classList.toggle("fill-current", liked);
         });
+    });
+
+    const volumeControl = document.querySelector("[data-player-volume]");
+    const muteButton = document.querySelector("[data-player-mute]");
+    const volumeIcon = document.querySelector("[data-volume-icon]");
+
+    if (volumeControl) {
+        volumeControl.value = String(Math.round(audio.volume * 100));
+        volumeControl.addEventListener("input", () => {
+            audio.volume = Number(volumeControl.value) / 100;
+            localStorage.setItem("portfolio-volume", String(audio.volume));
+            audio.muted = audio.volume === 0;
+            volumeIcon?.setAttribute("data-lucide", audio.muted ? "volume-x" : "volume-2");
+        });
+    }
+
+    muteButton?.addEventListener("click", () => {
+        audio.muted = !audio.muted;
+        muteButton.setAttribute("aria-label", audio.muted ? "Unmute" : "Mute");
+        volumeIcon?.setAttribute("data-lucide", audio.muted ? "volume-x" : "volume-2");
     });
 
     render();

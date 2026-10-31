@@ -104,14 +104,17 @@
 
     {{-- Kontrol kanan (desktop) --}}
     <div class="hidden w-56 items-center justify-end gap-3 md:flex">
-        <x-icon name="volume-2" class="size-4 shrink-0 text-muted-foreground" />
+        <button type="button" data-player-mute aria-label="Mute" class="text-muted-foreground transition-colors hover:text-foreground">
+            <x-icon name="volume-2" data-volume-icon class="size-4 shrink-0" />
+        </button>
         <input
             type="range"
+            data-player-volume
             min="0"
             max="100"
             value="70"
             aria-label="Volume"
-            class="w-24 accent-primary cursor-pointer"
+            class="w-24 cursor-pointer accent-primary"
         >
         <x-icon name="maximize-2" class="size-4 shrink-0 cursor-pointer text-muted-foreground transition-colors hover:text-foreground" />
     </div>

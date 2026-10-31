@@ -10,6 +10,10 @@ Portfolio menggunakan simulasi audio untuk project secara default.
 public/audio/skillink.mp3
 public/audio/savvy.mp3
 public/audio/voting-duta.mp3
+public/audio/sdn-ciledug-barat.mp3
+public/audio/clauve.mp3
+public/audio/smkletris2.mp3
+public/audio/travelin.mp3
 ```
 
 2. Update `config/portfolio.php`, tambahkan field `audio`:
