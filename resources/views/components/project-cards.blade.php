@@ -13,6 +13,7 @@
             <button
                 type="button"
                 data-track-row="{{ $i }}"
+                data-project-id="{{ $project['id'] }}"
                 class="group rounded-lg bg-secondary/50 p-3 text-left transition-colors hover:bg-accent/70"
             >
                 <span class="relative block">

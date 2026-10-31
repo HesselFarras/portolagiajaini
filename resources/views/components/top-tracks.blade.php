@@ -14,6 +14,7 @@
             <button
                 type="button"
                 data-track-row="{{ $i }}"
+                data-project-id="{{ $project['id'] }}"
                 class="group grid w-full grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-3 rounded-md px-2 py-2 text-left transition-colors hover:bg-accent/60 md:grid-cols-[1.5rem_minmax(0,1fr)_9rem_3rem_3rem] md:gap-4"
             >
                 <span class="flex items-center justify-center">

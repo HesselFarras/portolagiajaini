@@ -1,7 +1,7 @@
 @php
     $mobileNav = [
         ['label' => 'About', 'href' => '#tentang'],
-        ['label' => 'Projects', 'href' => '#proyek'],
+        ['label' => 'Projects', 'href' => '#rilisan'],
         ['label' => 'Releases', 'href' => '#rilisan'],
         ['label' => 'Skills', 'href' => '#keahlian'],
         ['label' => 'Experience', 'href' => '#pengalaman'],
@@ -30,10 +30,7 @@
 
         <div class="flex items-center gap-3">
             <a
-                href="{{ asset('documents/CV_HESSEL_FARRAS.pdf') }}"
-                download="CV_HESSEL_FARRAS.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="{{ route('cv.download') }}"
                 class="rounded-full bg-foreground px-4 py-2 text-xs font-bold text-background transition-transform hover:scale-105"
             >
                 Download CV

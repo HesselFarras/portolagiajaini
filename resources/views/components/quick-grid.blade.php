@@ -1,7 +1,6 @@
 @php
     $quickLinks = [
         ['label' => 'About', 'href' => '#about', 'icon' => 'user'],
-        ['label' => 'Top Projects', 'href' => '#proyek', 'icon' => 'folder-git-2'],
         ['label' => 'Latest Releases', 'href' => '#rilisan', 'icon' => 'disc-3'],
         ['label' => 'Skills', 'href' => '#keahlian', 'icon' => 'sparkles'],
         ['label' => 'Experience', 'href' => '#pengalaman', 'icon' => 'briefcase'],

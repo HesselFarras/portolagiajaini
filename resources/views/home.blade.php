@@ -22,7 +22,26 @@
                 'tagline' => $p['tagline'],
                 'duration' => $p['duration'],
                 'cover' => asset($p['cover']),
+                'audio' => isset($p['audio']) ? asset($p['audio']) : null,
             ])
+            ->values();
+
+        $projectsForModal = collect(config('portfolio.projects'))
+            ->map(function ($p) {
+                return [
+                    'id' => $p['id'],
+                    'title' => $p['title'],
+                    'tagline' => $p['tagline'],
+                    'description' => $p['description'],
+                    'tags' => $p['tags'],
+                    'year' => $p['year'],
+                    'plays' => $p['plays'],
+                    'duration' => $p['duration'],
+                    'cover' => asset($p['cover']),
+                    'demo' => $p['demo_url'] ?? 'https://example.com',
+                    'github' => $p['github_url'] ?? 'https://github.com/',
+                ];
+            })
             ->values();
     @endphp
 
@@ -37,7 +56,6 @@
                 <div class="space-y-12 px-4 pb-10 pt-6 md:px-8">
                     <x-quick-grid />
                     <x-about />
-                    <x-top-tracks />
                     <x-project-cards />
                     <x-skill-tiles />
                     <x-discography />
@@ -50,7 +68,42 @@
         <x-player-bar />
     </div>
 
+    <div
+        id="project-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+    >
+        <div class="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl">
+            <div class="relative">
+                <img id="project-modal-cover" src="" alt="" class="h-56 w-full object-cover md:h-72">
+                <button type="button" data-project-modal-close aria-label="Tutup detail project" class="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-black/60 text-xl text-white transition hover:bg-black/80">×</button>
+            </div>
+            <div class="space-y-5 p-6">
+                <div>
+                    <p id="project-modal-tagline" class="text-sm font-semibold text-primary"></p>
+                    <h2 id="project-modal-title" class="mt-1 text-3xl font-black tracking-tight"></h2>
+                    <p id="project-modal-meta" class="mt-2 text-xs text-muted-foreground"></p>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Tech Stack</h3>
+                    <div id="project-modal-tags" class="mt-2 flex flex-wrap gap-2"></div>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Tentang Project</h3>
+                    <p id="project-modal-description" class="mt-2 text-sm leading-7 text-foreground/80"></p>
+                </div>
+                <div class="flex gap-3">
+                    <a id="project-modal-demo" href="#" target="_blank" rel="noopener" class="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Live Demo</a>
+                    <a id="project-modal-github" href="#" target="_blank" rel="noopener" class="rounded-full border border-border px-5 py-2.5 text-sm font-bold">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         window.__TRACKS = @json($tracks);
+        window.__PROJECTS = @json($projectsForModal);
     </script>
 @endsection

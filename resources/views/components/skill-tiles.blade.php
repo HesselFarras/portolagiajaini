@@ -23,11 +23,11 @@
         Skills and technologies that I have mastered and used in my projects
     </p>
 
-    <div class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-3">
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         @foreach (config('portfolio.skills', []) as $skill)
-            <div class="relative h-28 overflow-hidden rounded-lg p-4 transition-transform hover:scale-[1.02] md:h-32 {{ $tileClasses[$skill['tile']] ?? 'bg-tile-green' }}">
+            <div class="relative min-h-32 overflow-hidden rounded-lg p-4 transition-transform hover:scale-[1.02] sm:min-h-36 {{ $tileClasses[$skill['tile']] ?? 'bg-tile-green' }}">
                 <p class="text-lg font-extrabold text-tile-foreground">{{ $skill['name'] }}</p>
-                <p class="mt-1 max-w-[75%] text-xs font-medium leading-relaxed text-tile-foreground/75">
+                <p class="mt-1 max-w-[80%] break-words text-xs font-medium leading-relaxed text-tile-foreground/75">
                     {{ $skill['detail'] }}
                 </p>
                 <!-- resources/views/components/skill-tiles.blade.php -->

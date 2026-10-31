@@ -2,7 +2,7 @@
     $projects = config('portfolio.projects');
     $navItems = [
         ['label' => 'About', 'href' => '#tentang', 'icon' => 'home'],
-        ['label' => 'Projects', 'href' => '#proyek', 'icon' => 'folder-git-2'],
+        ['label' => 'Projects', 'href' => '#rilisan', 'icon' => 'folder-git-2'],
         ['label' => 'Contact', 'href' => '#kontak', 'icon' => 'mail'],
     ];
 @endphp
@@ -40,6 +40,7 @@
                 <button
                     type="button"
                     data-track-row="{{ $i }}"
+                    data-project-id="{{ $project['id'] }}"
                     class="group flex w-full items-center gap-3 rounded-md p-2 text-left transition-colors hover:bg-accent/60"
                 >
                     <img

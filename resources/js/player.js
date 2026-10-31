@@ -19,6 +19,66 @@ const tracks = window.__TRACKS ?? [];
 
 const state = { index: 0, playing: false, progress: 0 };
 let timer = null;
+const audio = new Audio();
+audio.preload = "metadata";
+
+// ponytail: Web Audio API click sound, zero dependencies
+function openProjectModal(id) {
+    const project = (window.__PROJECTS ?? []).find((item) => item.id === id);
+    const modal = document.getElementById("project-modal");
+    if (!project || !modal) return;
+
+    document.getElementById("project-modal-cover").src = project.cover;
+    document.getElementById("project-modal-cover").alt = `Cover ${project.title}`;
+    document.getElementById("project-modal-title").textContent = project.title;
+    document.getElementById("project-modal-tagline").textContent = project.tagline;
+    document.getElementById("project-modal-meta").textContent = `${project.year} • ${project.plays} plays • ${project.duration}`;
+    document.getElementById("project-modal-description").textContent = project.description;
+    document.getElementById("project-modal-demo").href = project.demo;
+    document.getElementById("project-modal-github").href = project.github;
+
+    const tags = document.getElementById("project-modal-tags");
+    tags.replaceChildren(...project.tags.map((tag) => {
+        const badge = document.createElement("span");
+        badge.className = "rounded-full bg-secondary px-3 py-1 text-xs font-semibold";
+        badge.textContent = tag;
+        return badge;
+    }));
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById("project-modal");
+    if (!modal) return;
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+}
+
+function playClickSound() {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = 800;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.1);
+    } catch (e) {
+        // silent fail jika browser tidak support
+    }
+}
 
 function toSeconds(duration) {
     const [m = 0, s = 0] = String(duration).split(":").map(Number);
@@ -88,6 +148,33 @@ function render() {
 
 function startTimer() {
     stopTimer();
+    const current = tracks[state.index];
+    
+    // Pakai audio asli jika path tersedia
+    if (current?.audio) {
+        audio.src = current.audio;
+        audio.currentTime = state.progress;
+        audio.play().catch(() => {
+            // Fallback ke simulasi jika audio gagal
+            startSimulatedTimer();
+        });
+        
+        // Update progress dari audio
+        audio.ontimeupdate = () => {
+            state.progress = Math.floor(audio.currentTime);
+            renderProgress();
+        };
+        
+        audio.onended = () => {
+            next();
+        };
+    } else {
+        // Simulasi timer
+        startSimulatedTimer();
+    }
+}
+
+function startSimulatedTimer() {
     timer = window.setInterval(() => {
         if (state.progress + 1 >= duration()) {
             next();
@@ -99,6 +186,7 @@ function startTimer() {
 }
 
 function stopTimer() {
+    audio.pause();
     if (timer !== null) {
         window.clearInterval(timer);
         timer = null;
@@ -144,6 +232,10 @@ function prev() {
 
 function seek(seconds) {
     state.progress = Math.max(0, Math.min(seconds, duration()));
+    const current = tracks[state.index];
+    if (current?.audio && audio.src) {
+        audio.currentTime = state.progress;
+    }
     renderProgress();
 }
 
@@ -151,7 +243,11 @@ export function initPlayer() {
     if (!tracks.length) return;
 
     document.querySelectorAll("[data-track-row]").forEach((row) => {
-        row.addEventListener("click", () => playAt(Number(row.dataset.trackRow)));
+        row.addEventListener("click", () => {
+            playClickSound();
+            playAt(Number(row.dataset.trackRow));
+            openProjectModal(row.dataset.projectId);
+        });
     });
     document.querySelectorAll("[data-player-toggle]").forEach((btn) => btn.addEventListener("click", toggle));
     document.querySelectorAll("[data-player-next]").forEach((btn) => btn.addEventListener("click", next));
@@ -162,6 +258,14 @@ export function initPlayer() {
         const rect = bar.getBoundingClientRect();
         const ratio = Math.min(Math.max((event.clientX - rect.left) / rect.width, 0), 1);
         seek(Math.round(ratio * duration()));
+    });
+
+    document.querySelectorAll("[data-project-modal-close]").forEach((btn) => btn.addEventListener("click", closeProjectModal));
+    document.getElementById("project-modal")?.addEventListener("click", (event) => {
+        if (event.target.id === "project-modal") closeProjectModal();
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeProjectModal();
     });
 
     document.querySelectorAll("[data-like]").forEach((btn) => {
