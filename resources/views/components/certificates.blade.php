@@ -12,7 +12,7 @@
 
     <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         @foreach ($certificates->take(3) as $certificate)
-            <article class="overflow-hidden rounded-lg border border-border bg-secondary/50 transition-colors hover:bg-accent/70">
+            <article class="overflow-hidden rounded-lg border border-border bg-secondary/50 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-accent/70 hover:shadow-xl hover:shadow-primary/10">
                 <button
                     type="button"
                     data-certificate-preview
@@ -43,20 +43,9 @@
                     @endif
                     <span class="absolute bottom-3 right-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">View full preview</span>
                 </button>
-                <div class="flex items-center justify-between gap-3 p-4">
-                    <div class="min-w-0">
-                        <h3 class="truncate text-sm font-bold">{{ $certificate['title'] }}</h3>
-                        <p class="mt-1 text-xs font-medium text-muted-foreground">Issued {{ $certificate['year'] }}</p>
-                    </div>
-                    <a
-                        href="{{ $certificate['url'] }}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="shrink-0 text-xs font-bold text-primary transition-colors hover:text-foreground"
-                    >
-                        View full
-                        <span aria-hidden="true">↗</span>
-                    </a>
+                <div class="p-4">
+                    <h3 class="truncate text-sm font-bold">{{ $certificate['title'] }}</h3>
+                    <p class="mt-1 text-xs font-medium text-muted-foreground">Issued {{ $certificate['year'] }}</p>
                 </div>
             </article>
         @endforeach
@@ -65,7 +54,7 @@
     @if ($certificates->skip(3)->isNotEmpty())
         <div id="all-certificates" class="mt-3 grid max-h-0 grid-cols-1 gap-3 overflow-hidden opacity-0 transition-[max-height,opacity] duration-500 ease-out sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($certificates->skip(3) as $certificate)
-                <article class="overflow-hidden rounded-lg border border-border bg-secondary/50 transition-colors hover:bg-accent/70">
+                <article class="overflow-hidden rounded-lg border border-border bg-secondary/50 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-accent/70 hover:shadow-xl hover:shadow-primary/10">
                     <button type="button" data-certificate-preview data-certificate-title="{{ $certificate['title'] }}" data-certificate-image="{{ !empty($certificate['image']) ? asset($certificate['image']) : '' }}" class="group relative block aspect-[1.6/1] w-full overflow-hidden bg-gradient-to-br from-primary/30 via-card to-secondary p-4 text-left" aria-label="Lihat preview {{ $certificate['title'] }}">
                         @if (!empty($certificate['image']))
                             <img src="{{ asset($certificate['image']) }}" alt="Sertifikat {{ $certificate['title'] }}" loading="lazy" class="h-full w-full rounded border border-white/20 object-cover">
@@ -77,9 +66,9 @@
                             </span>
                         @endif
                     </button>
-                    <div class="flex items-center justify-between gap-3 p-4">
-                        <div class="min-w-0"><h3 class="truncate text-sm font-bold">{{ $certificate['title'] }}</h3><p class="mt-1 text-xs font-medium text-muted-foreground">Issued {{ $certificate['year'] }}</p></div>
-                        <a href="{{ $certificate['url'] }}" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-bold text-primary">View full ↗</a>
+                    <div class="p-4">
+                        <h3 class="truncate text-sm font-bold">{{ $certificate['title'] }}</h3>
+                        <p class="mt-1 text-xs font-medium text-muted-foreground">Issued {{ $certificate['year'] }}</p>
                     </div>
                 </article>
             @endforeach

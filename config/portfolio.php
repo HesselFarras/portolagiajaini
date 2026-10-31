@@ -220,7 +220,7 @@ return [
             'image' => 'images/certificates/serti3.png', 'url' => '#',
         ],
         [
-            'title' => 'Bootcamp Full-Stack Developer Laravel 11, TailwindCSS, dan Filament', 'year' => '2026',
+            'title' => 'Full-Stack Developer Laravel 11, TailwindCSS, dan Filament', 'year' => '2026',
             'image' => 'images/certificates/serti2.png', 'url' => '#',
         ],
     ],
