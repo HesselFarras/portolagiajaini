@@ -196,31 +196,31 @@ return [
             'image' => 'images/certificates/serti9.png', 'url' => '#',
         ],
         [
-            'title' => 'Red Hat System Administration I', 'year' => '2026',
+            'title' => 'Red Hat System Administration I', 'year' => '2025',
             'image' => 'images/certificates/serti8.png', 'url' => '#',
         ],
         [
-            'title' => 'Red Hat System Administration II', 'year' => '2026',
+            'title' => 'Red Hat System Administration II', 'year' => '2025',
             'image' => 'images/certificates/serti7.png', 'url' => '#',
         ],
         [
-            'title' => 'Linux Essentials', 'year' => '2026',
+            'title' => 'Linux Essentials', 'year' => '2025',
             'image' => 'images/certificates/serti6.png', 'url' => '#',
         ],
         [
-            'title' => 'Operating Systems Basics', 'year' => '2026',
+            'title' => 'Operating Systems Basics', 'year' => '2025',
             'image' => 'images/certificates/serti5.png', 'url' => '#',
         ],
         [
-            'title' => 'Dasar AI', 'year' => '2026',
+            'title' => 'Dasar AI', 'year' => '2025',
             'image' => 'images/certificates/serti4.png', 'url' => '#',
         ],
         [
-            'title' => 'DCI Bootcamp for Beginners: Flutter', 'year' => '2026',
+            'title' => 'DCI Bootcamp for Beginners: Flutter', 'year' => '2025',
             'image' => 'images/certificates/serti3.png', 'url' => '#',
         ],
         [
-            'title' => 'Full-Stack Developer Laravel 11, TailwindCSS, dan Filament', 'year' => '2026',
+            'title' => 'Full-Stack Developer Laravel 11, TailwindCSS, dan Filament', 'year' => '2025',
             'image' => 'images/certificates/serti2.png', 'url' => '#',
         ],
     ],
