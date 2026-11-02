@@ -59,7 +59,6 @@
                     <x-about />
                     <x-project-cards />
                     <x-skill-tiles />
-                    <x-certificates />
                     <x-discography />
                     <x-contact />
                     <x-footer />
@@ -79,12 +78,10 @@
     >
         <div class="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl">
             <div class="relative">
-                <div class="relative">
-                    <img id="project-modal-cover" src="" alt="" class="h-56 w-full object-cover md:h-72">
-                    <button type="button" data-project-gallery-prev aria-label="Gambar sebelumnya" class="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">‹</button>
-                    <button type="button" data-project-gallery-next aria-label="Gambar berikutnya" class="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">›</button>
-                    <div id="project-gallery-thumbs" class="absolute bottom-3 left-1/2 flex max-w-[90%] -translate-x-1/2 gap-2 overflow-x-auto rounded-lg bg-black/50 p-2"></div>
-                </div>
+                <img id="project-modal-cover" src="" alt="" class="h-56 w-full object-cover md:h-72">
+                <button type="button" data-project-gallery-prev aria-label="Gambar sebelumnya" class="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">‹</button>
+                <button type="button" data-project-gallery-next aria-label="Gambar berikutnya" class="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">›</button>
+                <div id="project-gallery-thumbs" class="absolute bottom-3 left-1/2 flex max-w-[90%] -translate-x-1/2 gap-2 overflow-x-auto rounded-lg bg-black/50 p-2"></div>
                 <button type="button" data-project-modal-close aria-label="Tutup detail project" class="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-black/60 text-xl text-white transition hover:bg-black/80">×</button>
             </div>
             <div class="space-y-5 p-6">
@@ -104,19 +101,6 @@
                 <div class="flex gap-3">
                     <a id="project-modal-demo" href="#" target="_blank" rel="noopener" class="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Live Demo</a>
                     <a id="project-modal-github" href="#" target="_blank" rel="noopener" class="rounded-full border border-border px-5 py-2.5 text-sm font-bold">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="certificate-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="certificate-modal-title">
-        <div class="relative max-h-[95vh] w-full max-w-6xl rounded-xl bg-card p-4 shadow-2xl">
-            <button type="button" data-certificate-modal-close aria-label="Tutup preview sertifikat" class="absolute right-6 top-6 z-10 grid size-10 place-items-center rounded-full bg-black/70 text-xl text-white">×</button>
-            <h2 id="certificate-modal-title" class="mb-3 pr-12 text-sm font-bold"></h2>
-            <div class="flex max-h-[82vh] justify-center overflow-auto rounded-lg bg-white p-3">
-                <img id="certificate-modal-image" src="" alt="" class="block max-h-[78vh] max-w-full w-auto object-contain">
-                <div id="certificate-modal-placeholder" class="hidden aspect-[1.6/1] w-full max-w-3xl items-center justify-center rounded-lg border border-primary/30 bg-gradient-to-br from-primary/20 via-card to-secondary p-8 text-center">
-                    <div><p class="text-xs font-bold uppercase tracking-widest text-primary">Certificate Preview</p><p id="certificate-modal-placeholder-title" class="mt-3 text-2xl font-black"></p></div>
                 </div>
             </div>
         </div>
