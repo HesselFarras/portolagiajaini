@@ -30,7 +30,8 @@
 
         <div class="flex items-center gap-3">
             <a
-                href="{{ route('cv.download') }}"
+                href="{{ asset('documents/CV_Hessel_Farras_Abiyyu.pdf') }}"
+                download="CV_Hessel_Farras_Abiyyu.pdf"
                 class="rounded-full bg-foreground px-4 py-2 text-xs font-bold text-background transition-transform hover:scale-105"
             >
                 Download CV
