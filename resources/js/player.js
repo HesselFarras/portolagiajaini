@@ -66,12 +66,13 @@ function renderProjectGallery(title) {
     if (!current) return;
     image.src = current;
     image.alt = `${title} screenshot ${projectGalleryIndex + 1}`;
+    image.onclick = () => window.open(current, "_blank", "noopener,noreferrer");
     previous?.classList.toggle("hidden", projectGallery.length < 2);
     nextButton?.classList.toggle("hidden", projectGallery.length < 2);
     thumbs.replaceChildren(...projectGallery.map((src, index) => {
         const thumb = document.createElement("button");
         thumb.type = "button";
-        thumb.className = `size-12 shrink-0 overflow-hidden rounded border-2 ${index === projectGalleryIndex ? "border-primary" : "border-white/30"}`;
+        thumb.className = `size-16 shrink-0 overflow-hidden rounded-lg border-2 ${index === projectGalleryIndex ? "border-primary" : "border-white/30"}`;
         thumb.innerHTML = `<img src="${src}" alt="Screenshot ${index + 1}" class="h-full w-full object-cover">`;
         thumb.addEventListener("click", () => {
             projectGalleryIndex = index;

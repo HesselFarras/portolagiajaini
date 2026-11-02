@@ -81,7 +81,11 @@ return [
             'year' => '2026',
             'cover' => asset('images/cover-4.png'),
             'audio' => 'audio/skillink.mp3',
-            'screenshots' => [],
+            'screenshots' => [
+                'images/projects/voting-duta/kandidat.png',
+                'images/projects/voting-duta/landingpage.png',
+                'images/projects/voting-duta/leaderboard.png',
+            ],
         ],
         [
             'id' => 'sdn-ciledug-barat',
@@ -107,7 +111,16 @@ return [
             'year' => '2025',
             'cover' => asset('images/cover-5.png'),
             'audio' => 'audio/skillink.mp3',
-            'screenshots' => [],
+            'screenshots' => [
+                'images/projects/clauve/cart.png',
+                'images/projects/clauve/checkout.png',
+                'images/projects/clauve/landingpage.png',
+                'images/projects/clauve/login.png',
+                'images/projects/clauve/midtrans.png',
+                'images/projects/clauve/orders.png',
+                'images/projects/clauve/product.png',
+                'images/projects/clauve/shippingstatus.png',
+            ],
         ],
         [
             'id' => 'smkletris2',
@@ -133,7 +146,11 @@ return [
             'year' => '2024',
             'cover' => asset('images/cover-7.png'),
             'audio' => 'audio/skillink.mp3',
-            'screenshots' => [],
+            'screenshots' => [
+                'images/projects/travelin/landingpage.png',
+                'images/projects/travelin/resultsearch.png',
+                'images/projects/travelin/searchticket.png',
+            ],
         ]
 
     ],

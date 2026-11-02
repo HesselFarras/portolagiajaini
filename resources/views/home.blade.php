@@ -76,12 +76,14 @@
         aria-modal="true"
         aria-labelledby="project-modal-title"
     >
-        <div class="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl">
-            <div class="relative">
-                <img id="project-modal-cover" src="" alt="" class="h-56 w-full object-cover md:h-72">
+        <div class="max-h-[95vh] w-full max-w-6xl overflow-y-auto rounded-2xl border border-white/10 bg-card shadow-2xl">
+            <div class="relative bg-black/40 p-2 md:p-4">
+                <div class="flex max-h-[70vh] min-h-[22rem] items-center justify-center overflow-auto rounded-xl bg-black/30">
+                    <img id="project-modal-cover" src="" alt="" class="block max-h-[68vh] max-w-full cursor-zoom-in object-contain md:max-h-[72vh]">
+                </div>
                 <button type="button" data-project-gallery-prev aria-label="Gambar sebelumnya" class="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">‹</button>
                 <button type="button" data-project-gallery-next aria-label="Gambar berikutnya" class="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-black/60 px-3 py-2 text-white">›</button>
-                <div id="project-gallery-thumbs" class="absolute bottom-3 left-1/2 flex max-w-[90%] -translate-x-1/2 gap-2 overflow-x-auto rounded-lg bg-black/50 p-2"></div>
+                <div id="project-gallery-thumbs" class="absolute bottom-4 left-1/2 flex max-w-[94%] -translate-x-1/2 gap-2 overflow-x-auto rounded-xl bg-black/70 p-2.5 shadow-lg"></div>
                 <button type="button" data-project-modal-close aria-label="Tutup detail project" class="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-black/60 text-xl text-white transition hover:bg-black/80">×</button>
             </div>
             <div class="space-y-5 p-6">

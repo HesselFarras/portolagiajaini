@@ -70,3 +70,16 @@ body {
     color: var(--color-foreground);
     font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Hero light, portfolio canvas stays dark. */
+main {
+    background-color: var(--color-card);
+}
+
+main section:not(#tentang) {
+    background-color: var(--color-card);
+}
+
+@media (min-width: 768px) {
+    main section:not(#tentang) { padding: 2rem; }
+}
