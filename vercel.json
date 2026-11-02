@@ -12,6 +12,10 @@
             "dest": "/public/build/$1"
         },
         {
+            "src": "/documents/(.*\\.pdf)$",
+            "dest": "/public/documents/$1"
+        },
+        {
             "src": "/(favicon\\.ico|robots\\.txt|(?:storage|images|assets|audio)/.*)",
             "dest": "/public/$1"
         },
