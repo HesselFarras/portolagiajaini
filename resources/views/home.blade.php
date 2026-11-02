@@ -38,8 +38,8 @@
                     'plays' => $p['plays'],
                     'duration' => $p['duration'],
                     'cover' => asset($p['cover']),
-                    'demo' => $p['demo_url'] ?? 'https://example.com',
-                    'github' => $p['github_url'] ?? 'https://github.com/',
+                    'demo' => $p['demo_url'] ?? null,
+                    'github' => $p['github_url'] ?? null,
                     'screenshots' => collect($p['screenshots'] ?? [])->map(fn ($image) => asset($image))->values(),
                 ];
             })
@@ -100,9 +100,9 @@
                     <h3 class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Tentang Project</h3>
                     <p id="project-modal-description" class="mt-2 text-sm leading-7 text-foreground/80"></p>
                 </div>
-                <div class="flex gap-3">
-                    <a id="project-modal-demo" href="#" target="_blank" rel="noopener" class="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Live Demo</a>
-                    <a id="project-modal-github" href="#" target="_blank" rel="noopener" class="rounded-full border border-border px-5 py-2.5 text-sm font-bold">GitHub</a>
+                <div id="project-modal-links" class="flex gap-3">
+                    <a id="project-modal-demo" href="#" target="_blank" rel="noopener" class="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Live Demo</a>
+                    <a id="project-modal-github" href="#" target="_blank" rel="noopener" class="hidden rounded-full border border-border px-5 py-2.5 text-sm font-bold">GitHub</a>
                 </div>
             </div>
         </div>

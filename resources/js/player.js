@@ -40,8 +40,16 @@ function openProjectModal(id) {
     document.getElementById("project-modal-tagline").textContent = project.tagline;
     document.getElementById("project-modal-meta").textContent = `${project.year} • ${project.plays} plays • ${project.duration}`;
     document.getElementById("project-modal-description").textContent = project.description;
-    document.getElementById("project-modal-demo").href = project.demo;
-    document.getElementById("project-modal-github").href = project.github;
+
+    const demoButton = document.getElementById("project-modal-demo");
+    const githubButton = document.getElementById("project-modal-github");
+    const links = document.getElementById("project-modal-links");
+
+    demoButton.href = project.demo ?? "#";
+    githubButton.href = project.github ?? "#";
+    demoButton.classList.toggle("hidden", !project.demo);
+    githubButton.classList.toggle("hidden", !project.github);
+    links.classList.toggle("hidden", !project.demo && !project.github);
 
     const tags = document.getElementById("project-modal-tags");
     tags.replaceChildren(...project.tags.map((tag) => {
