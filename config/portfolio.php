@@ -55,6 +55,7 @@ return [
             'year' => '2026',
             'cover' => asset('images/cover-1.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'Savvy',
@@ -67,6 +68,7 @@ return [
             'year' => '2026',
             'cover' => asset('images/cover-2.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'voting-duta',
@@ -79,6 +81,7 @@ return [
             'year' => '2026',
             'cover' => asset('images/cover-4.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'sdn-ciledug-barat',
@@ -91,6 +94,7 @@ return [
             'year' => '2026',
             'cover' => asset('images/cover-3.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'clauve',
@@ -103,6 +107,7 @@ return [
             'year' => '2025',
             'cover' => asset('images/cover-5.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'smkletris2',
@@ -115,6 +120,7 @@ return [
             'year' => '2025',
             'cover' => asset('images/cover-6.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ],
         [
             'id' => 'travelin',
@@ -127,6 +133,7 @@ return [
             'year' => '2024',
             'cover' => asset('images/cover-7.png'),
             'audio' => 'audio/skillink.mp3',
+            'screenshots' => [],
         ]
 
     ],

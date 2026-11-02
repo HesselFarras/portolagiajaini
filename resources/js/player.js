@@ -21,6 +21,8 @@ const state = { index: 0, playing: false, progress: 0 };
 let timer = null;
 const audio = new Audio();
 audio.preload = "metadata";
+let projectGallery = [];
+let projectGalleryIndex = 0;
 audio.volume = Number(localStorage.getItem("portfolio-volume") ?? 0.7);
 
 // ponytail: Web Audio API click sound, zero dependencies
@@ -29,7 +31,10 @@ function openProjectModal(id) {
     const modal = document.getElementById("project-modal");
     if (!project || !modal) return;
 
-    document.getElementById("project-modal-cover").src = project.cover;
+    projectGallery = [project.cover, ...(project.screenshots ?? [])];
+    projectGalleryIndex = 0;
+    renderProjectGallery(project.title);
+
     document.getElementById("project-modal-cover").alt = `Cover ${project.title}`;
     document.getElementById("project-modal-title").textContent = project.title;
     document.getElementById("project-modal-tagline").textContent = project.tagline;
@@ -49,6 +54,31 @@ function openProjectModal(id) {
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
+}
+
+function renderProjectGallery(title) {
+    const image = document.getElementById("project-modal-cover");
+    const thumbs = document.getElementById("project-gallery-thumbs");
+    const previous = document.querySelector("[data-project-gallery-prev]");
+    const nextButton = document.querySelector("[data-project-gallery-next]");
+    const current = projectGallery[projectGalleryIndex];
+
+    if (!current) return;
+    image.src = current;
+    image.alt = `${title} screenshot ${projectGalleryIndex + 1}`;
+    previous?.classList.toggle("hidden", projectGallery.length < 2);
+    nextButton?.classList.toggle("hidden", projectGallery.length < 2);
+    thumbs.replaceChildren(...projectGallery.map((src, index) => {
+        const thumb = document.createElement("button");
+        thumb.type = "button";
+        thumb.className = `size-12 shrink-0 overflow-hidden rounded border-2 ${index === projectGalleryIndex ? "border-primary" : "border-white/30"}`;
+        thumb.innerHTML = `<img src="${src}" alt="Screenshot ${index + 1}" class="h-full w-full object-cover">`;
+        thumb.addEventListener("click", () => {
+            projectGalleryIndex = index;
+            renderProjectGallery(title);
+        });
+        return thumb;
+    }));
 }
 
 function openCertificateModal(button) {
@@ -120,7 +150,10 @@ function toClock(total) {
 }
 
 function duration() {
-    return toSeconds(tracks[state.index]?.duration ?? "0:00");
+    const audioDuration = Number.isFinite(audio.duration) ? audio.duration : 0;
+    return audio.src && audioDuration > 0
+        ? audioDuration
+        : toSeconds(tracks[state.index]?.duration ?? "0:00");
 }
 
 function setText(selector, text) {
@@ -182,6 +215,10 @@ function startTimer() {
     if (current?.audio) {
         audio.src = current.audio;
         audio.currentTime = state.progress;
+        audio.onloadedmetadata = () => {
+            setText("#pb-duration", toClock(audio.duration));
+            renderProgress();
+        };
         audio.play().catch(() => {
             // Fallback ke simulasi jika audio gagal
             startSimulatedTimer();
@@ -289,6 +326,14 @@ export function initPlayer() {
     });
 
     document.querySelectorAll("[data-project-modal-close]").forEach((btn) => btn.addEventListener("click", closeProjectModal));
+    document.querySelector("[data-project-gallery-prev]")?.addEventListener("click", () => {
+        projectGalleryIndex = (projectGalleryIndex - 1 + projectGallery.length) % projectGallery.length;
+        renderProjectGallery((window.__PROJECTS ?? [])[state.index]?.title ?? "Project");
+    });
+    document.querySelector("[data-project-gallery-next]")?.addEventListener("click", () => {
+        projectGalleryIndex = (projectGalleryIndex + 1) % projectGallery.length;
+        renderProjectGallery((window.__PROJECTS ?? [])[state.index]?.title ?? "Project");
+    });
     document.querySelectorAll("[data-certificate-preview]").forEach((btn) => btn.addEventListener("click", () => openCertificateModal(btn)));
     document.querySelectorAll("[data-certificates-toggle]").forEach((btn) => {
         btn.addEventListener("click", () => {
