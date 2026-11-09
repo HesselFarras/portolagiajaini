@@ -25,7 +25,7 @@
                         height="640"
                         class="aspect-square w-full rounded-md object-cover shadow-2xl"
                     >
-                    <span class="absolute bottom-2 right-2 grid size-10 translate-y-2 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 shadow-lg transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                    <span data-track-play class="absolute bottom-2 right-2 grid size-10 place-items-center rounded-full bg-primary text-primary-foreground opacity-100 shadow-lg transition-all md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                         <x-icon name="play" class="ml-0.5 size-4 fill-current" />
                     </span>
                 </span>

@@ -1,7 +1,7 @@
 @php
     $footerNav = [
         ['label' => 'About', 'href' => '#tentang'],
-        ['label' => 'Projects', 'href' => '#proyek'],
+        ['label' => 'Projects', 'href' => '#rilisan'],
         ['label' => 'Skills', 'href' => '#keahlian'],
         ['label' => 'Experience', 'href' => '#pengalaman'],
         ['label' => 'Contact', 'href' => '#kontak'],

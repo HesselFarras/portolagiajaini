@@ -1,8 +1,9 @@
 @php
     $quickLinks = [
-        ['label' => 'About', 'href' => '#about', 'icon' => 'user'],
+        ['label' => 'About', 'href' => '#tentang', 'icon' => 'user'],
         ['label' => 'Latest Releases', 'href' => '#rilisan', 'icon' => 'disc-3'],
         ['label' => 'Skills', 'href' => '#keahlian', 'icon' => 'sparkles'],
+        ['label' => 'Certificates', 'href' => '#sertifikat', 'icon' => 'badge-check'],
         ['label' => 'Experience', 'href' => '#pengalaman', 'icon' => 'briefcase'],
         ['label' => 'Contact', 'href' => '#kontak', 'icon' => 'mail'],
     ];

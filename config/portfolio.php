@@ -54,7 +54,7 @@ return [
             'duration' => '4:10',
             'year' => '2026',
             'cover' => asset('images/cover-2.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/nothing.mp3',
             'screenshots' => [],
         ],
         [
@@ -69,7 +69,7 @@ return [
             'duration' => '3:15',
             'year' => '2026',
             'cover' => asset('images/cover-4.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/sekianterimakasih.mp3',
             'screenshots' => [
                 'images/projects/voting-duta/landingpage.png',
                 'images/projects/voting-duta/kandidat.png',
@@ -88,7 +88,7 @@ return [
             'duration' => '4:00',
             'year' => '2026',
             'cover' => asset('images/cover-3.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/masamasa.mp3',
             'screenshots' => [
                 'images/projects/sdn-ciledug-barat/landingpage.png',
                 'images/projects/sdn-ciledug-barat/about.png',
@@ -116,7 +116,7 @@ return [
             'duration' => '3:30',
             'year' => '2025',
             'cover' => asset('images/cover-5.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/luther.mp3',
             'screenshots' => [
                 'images/projects/clauve/login.png',
                 'images/projects/clauve/landingpage.png',
@@ -139,7 +139,7 @@ return [
             'duration' => '3:50',
             'year' => '2025',
             'cover' => asset('images/cover-6.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/kalima.mp3',
             'screenshots' => [
                 'images/projects/smkletris2/landingpage.png',
                 'images/projects/smkletris2/about.png',
@@ -160,7 +160,7 @@ return [
             'duration' => '3:50',
             'year' => '2024',
             'cover' => asset('images/cover-7.png'),
-            'audio' => 'audio/skillink.mp3',
+            'audio' => 'audio/inliinwy.mp3',
             'screenshots' => [
                 'images/projects/travelin/landingpage.png',
                 'images/projects/travelin/searchticket.png',

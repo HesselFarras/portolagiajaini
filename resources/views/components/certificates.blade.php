@@ -2,7 +2,7 @@
     <div class="flex items-end justify-between gap-4">
         <div>
             <h2 class="text-2xl font-bold tracking-tight">Certificates</h2>
-            <p class="mt-1 text-sm text-muted-foreground">Selected certificates and completed courses</p>
+            <p class="mt-1 text-sm text-muted-foreground">My bunch of certificates and completed courses</p>
         </div>
     </div>
 

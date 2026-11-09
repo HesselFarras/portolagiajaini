@@ -59,6 +59,7 @@
                     <x-about />
                     <x-project-cards />
                     <x-skill-tiles />
+                    <x-certificates />
                     <x-discography />
                     <x-contact />
                     <x-footer />

@@ -317,9 +317,14 @@ export function initPlayer() {
     if (!tracks.length) return;
 
     document.querySelectorAll("[data-track-row]").forEach((row) => {
-        row.addEventListener("click", () => {
-            playClickSound();
-            playAt(Number(row.dataset.trackRow));
+        row.addEventListener("click", (event) => {
+            if (event.target.closest("[data-track-play]")) {
+                event.stopPropagation();
+                playClickSound();
+                playAt(Number(row.dataset.trackRow));
+                return;
+            }
+
             openProjectModal(row.dataset.projectId);
         });
     });

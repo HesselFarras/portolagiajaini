@@ -2,8 +2,8 @@
     $mobileNav = [
         ['label' => 'About', 'href' => '#tentang'],
         ['label' => 'Projects', 'href' => '#rilisan'],
-        ['label' => 'Releases', 'href' => '#rilisan'],
         ['label' => 'Skills', 'href' => '#keahlian'],
+        ['label' => 'Certificates', 'href' => '#sertifikat'],
         ['label' => 'Experience', 'href' => '#pengalaman'],
         ['label' => 'Contact', 'href' => '#kontak'],
     ];
