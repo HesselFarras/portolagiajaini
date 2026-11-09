@@ -23,7 +23,7 @@ return [
         'avatar' => asset('images/avatar.jpg'),
         'hero' => asset('images/hero-artist.jpg'),
         'hero_alt' => 'Hessel Farras in workspace with Spotify dark mode theme',
-        'stats' => '7 Projects Released • Informatics Engineering Student & Tech Explorer • Indonesia',
+        'stats' => '6 Projects Released • Informatics Engineering Student & Tech Explorer • Indonesia',
     ],
 
     /*

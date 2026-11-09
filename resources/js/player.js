@@ -51,6 +51,23 @@ function openProjectModal(id) {
     githubButton.classList.toggle("hidden", !project.github);
     links.classList.toggle("hidden", !project.demo && !project.github);
 
+    const modalPlay = document.getElementById("project-modal-play");
+    if (modalPlay) {
+        modalPlay.textContent = state.index === tracks.findIndex((track) => track.title === project.title) && state.playing
+            ? "⏸ Pause"
+            : "▶ Play";
+        modalPlay.onclick = () => {
+            const projectIndex = tracks.findIndex((track) => track.title === project.title);
+            if (projectIndex < 0) return;
+            if (state.index !== projectIndex) {
+                playAt(projectIndex);
+            } else {
+                toggle();
+            }
+            modalPlay.textContent = state.playing ? "⏸ Pause" : "▶ Play";
+        };
+    }
+
     const tags = document.getElementById("project-modal-tags");
     tags.replaceChildren(...project.tags.map((tag) => {
         const badge = document.createElement("span");

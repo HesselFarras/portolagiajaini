@@ -93,6 +93,9 @@
                     <h2 id="project-modal-title" class="mt-1 text-3xl font-black tracking-tight"></h2>
                     <p id="project-modal-meta" class="mt-2 text-xs text-muted-foreground"></p>
                 </div>
+                <button type="button" id="project-modal-play" class="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition hover:scale-105">
+                    ▶ Play project audio
+                </button>
                 <div>
                     <h3 class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Tech Stack</h3>
                     <div id="project-modal-tags" class="mt-2 flex flex-wrap gap-2"></div>
